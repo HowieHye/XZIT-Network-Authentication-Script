@@ -14,7 +14,8 @@ selectoperator = """1：中国移动
 3：中国电信
 请选择运营商："""
 
-if os.path.exists('wifi.txt'):
+cur_dic = os.getcwd()
+if os.path.exists(cur_dic+'/wifi.txt'):
     with open('wifi.txt', 'r') as f:
         lines = f.readlines()
         username = str(lines[0]).replace("\n", "").replace("\r", "")
